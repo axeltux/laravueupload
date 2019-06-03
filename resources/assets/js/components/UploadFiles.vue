@@ -7,7 +7,7 @@
             </p>
         </div>
 
-        <div v-for="(file, key) in files" class="file-listing">
+        <div v-for="file in files" :key="file.id" class="file-listing">
             <img class="preview" v-bind:ref="'preview'+parseInt(key)"/>
             {{ file.name }}
             <div class="success-container" v-if="file.id > 0">

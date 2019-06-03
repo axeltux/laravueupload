@@ -37292,11 +37292,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         return _vm.handleFiles()
       }
     }
-  }), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _vm._l((_vm.files), function(file, key) {
+  }), _vm._v(" "), _vm._m(0)]), _vm._v(" "), _vm._l((_vm.files), function(file) {
     return _c('div', {
+      key: file.id,
       staticClass: "file-listing"
     }, [_c('img', {
-      ref: 'preview' + parseInt(key),
+      ref: 'preview' + parseInt(_vm.key),
       refInFor: true,
       staticClass: "preview"
     }), _vm._v("\n        " + _vm._s(file.name) + "\n        "), (file.id > 0) ? _c('div', {
@@ -37315,7 +37316,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: "remove",
       on: {
         "click": function($event) {
-          return _vm.removeFile(key)
+          return _vm.removeFile(_vm.key)
         }
       }
     }, [_vm._v("Quitar")])])])
