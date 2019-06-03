@@ -22,7 +22,7 @@ class FileEntriesController extends Controller
 
     public function uploadFile(Request $request) {
         $this->validate($request, [
-//            'file' => 'image|max:3000'
+            //'file' => 'image|max:3000'
         ]);
 
         $file = Input::file('file');
